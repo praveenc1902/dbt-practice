@@ -1,0 +1,66 @@
+dbt_project.yml
+Every dbt project includes a project configuration file called dbt_project.yml. 
+It defines the directory of the dbt project and other project configurations.
+--------------
+Configurations are "model settings" that can be set in your dbt_project.yml 
+file, and in your model file using a config block
+--------------
+materialization
+dbt ships with five materializations: view, table, incremental, ephemeral and materialized_view
+View
+When using the view materialization, your model is rebuilt as a view on each run, via a create view as statement.
+Table
+When using the table materialization, your model is rebuilt as a table on each run, via a create table as statement.
+Incremental
+incremental models allow dbt to insert or update records into a table since the last time that model was run.
+Ephemeral
+ephemeral models are not directly built into the database. Instead, dbt will interpolate the code from this model into dependent models as a common table expression.
+Materialized View
+The materialized view materialization allows the creation and maintenance of materialized views in the target database. 
+Materialized views are a combination of a view and a table, and serve use cases similar to incremental models.
+--------------------
+snapshots
+used for scd-2
+seeds
+used to create a static table in the target with the csv file present in dbt repo
+tests
+used to do unit testing 
+--------------------
+jinjas
+using jinjas we can use if and for loops
+use env variables
+Return a list of columns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
